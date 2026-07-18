@@ -7,11 +7,11 @@ export default function ContactPage() {
     <main className="bg-[#FAFAFA] min-h-screen">
 
       {/* Header */}
-      <section className="bg-[#181818] py-24 px-6 lg:px-16 text-center">
+      <section className="bg-[#181818] py-24 px-6 lg:px-16 text-center pt-40">
         <h1 className="text-4xl md:text-5xl font-medium text-white mb-4">
-          How Can We Help You?
+          How Can We Help?
         </h1>
-        <div className="w-96 h-1 bg-[#E63946] mx-auto" />
+        <div className="w-80 h-1 bg-[#E63946] mx-auto" />
       </section>
 
       {/* FAQs */}
@@ -55,7 +55,7 @@ export default function ContactPage() {
           </div>
           <div className="w-full h-80 overflow-hidden">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49725.23!2d-76.7383!3d39.3773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c81a2d2f5b5b5b%3A0x1234!2sPikesville%2C+MD!5e0!3m2!1sen!2sus!4v1234567890"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d394411.6279391805!2d-76.92129254876349!3d39.43902758951485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c803aed6f483b7%3A0x2774e0a871602819!2sBaltimore%20County%2C%20MD!5e0!3m2!1sen!2sus!4v1784412136032!5m2!1sen!2sus" 
               width="100%"
               height="100%"
               style={{ border: 0 }}

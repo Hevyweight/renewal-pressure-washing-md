@@ -5,7 +5,7 @@ export default function ReviewsPage() {
     <main className="bg-[#FAFAFA] min-h-screen">
 
       {/* Header */}
-      <section className="bg-[#181818] py-24 px-6 lg:px-16 text-center">
+      <section className="bg-[#181818] py-24 px-6 lg:px-16 text-center pt-40">
         <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
           Reviews
         </h1>

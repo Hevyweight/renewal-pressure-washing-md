@@ -52,7 +52,7 @@ export default function QuotePage() {
   };
 
   return (
-    <main className="bg-[#FAFAFA] min-h-screen py-24 px-6 lg:px-16">
+    <main className="bg-[#FAFAFA] min-h-screen py-24 px-6 lg:px-16 pt-40">
       <div className="max-w-2xl mx-auto">
         <h1 className="text-3xl md:text-4xl font-bold text-[#181818] mb-2">
           Get a Free Quote
