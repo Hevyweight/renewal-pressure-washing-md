@@ -1,0 +1,142 @@
+import Link from "next/link";
+import FAQAccordion from "../components/contact/faqAccordion";
+
+
+export default function ContactPage() {
+  return (
+    <main className="bg-[#FAFAFA] min-h-screen">
+
+      {/* Header */}
+      <section className="bg-[#181818] py-24 px-6 lg:px-16 text-center">
+        <h1 className="text-4xl md:text-5xl font-medium text-white mb-4">
+          How Can We Help You?
+        </h1>
+        <div className="w-96 h-1 bg-[#E63946] mx-auto" />
+      </section>
+
+      {/* FAQs */}
+      <FAQAccordion />
+
+      {/* CTA */}
+      <section className="bg-[#E63946] py-16 px-6 lg:px-16">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Get Quick and Easy Free Quote
+          </h2>
+          <p className="text-white text-lg mb-8">
+            Fill out our quick form and we&apos;ll come out to assess your property at no cost to you.
+          </p>
+          <Link
+            href="/quote"
+            className="inline-block bg-white text-[#181818] font-bold text-lg px-10 py-4 hover:bg-gray-100 transition-colors duration-200"
+          >
+            Request Your Free Quote
+          </Link>
+        </div>
+      </section>
+
+      {/* Map Section */}
+      <section className="bg-[#FAFAFA] py-20 px-6 lg:px-16">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+          <div>
+            <h2 className="text-3xl font-bold text-[#181818] mb-2">
+              Serving Baltimore & Surrounding Areas
+            </h2>
+            <div className="w-16 h-1 bg-[#E63946] mb-6" />
+            <p className="text-[#2A2A2A] leading-relaxed mb-6">
+              Based in Pikesville, MD, Renewal Pressure Washing proudly serves homeowners and commercial properties throughout the greater Baltimore area. Whether you&apos;re in the city or the suburbs, we bring the same standard of clean to every job.
+            </p>
+            <Link
+              href="/service-areas"
+              className="text-[#181818] font-bold underline underline-offset-4 hover:text-[#E63946] transition-colors"
+            >
+              See All Service Areas →
+            </Link>
+          </div>
+          <div className="w-full h-80 overflow-hidden">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49725.23!2d-76.7383!3d39.3773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c81a2d2f5b5b5b%3A0x1234!2sPikesville%2C+MD!5e0!3m2!1sen!2sus!4v1234567890"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Info + Form */}
+      <section className="bg-white py-20 px-6 lg:px-16">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+
+          {/* Contact Info */}
+          <div>
+            <h2 className="text-2xl font-bold text-[#181818] mb-2">
+              Get In Touch
+            </h2>
+            <div className="w-12 h-1 bg-[#E63946] mb-8" />
+            <div className="flex flex-col gap-6">
+              <div>
+                <p className="text-sm font-semibold text-[#E63946] uppercase tracking-widest mb-1">Phone</p>
+                <a href="tel:4109998886" className="text-[#181818] text-lg font-medium hover:text-[#E63946] transition-colors">
+                  (410) 999 8886
+                </a>
+              </div>
+              <div>
+                <p className="text-sm font-semibold text-[#E63946] uppercase tracking-widest mb-1">Email</p>
+                <a href="mailto:info@renewalpressurewashing.com" className="text-[#181818] text-lg font-medium hover:text-[#E63946] transition-colors">
+                  info@renewalpressurewashing.com
+                </a>
+              </div>
+              <div>
+                <p className="text-sm font-semibold text-[#E63946] uppercase tracking-widest mb-1">Hours</p>
+                <p className="text-[#181818] text-lg font-medium">Open 24/7</p>
+              </div>
+              <div>
+                <p className="text-sm font-semibold text-[#E63946] uppercase tracking-widest mb-1">Service Area</p>
+                <p className="text-[#181818] text-lg font-medium">Baltimore & Surrounding Areas</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Small Contact Form */}
+          <div>
+            <h2 className="text-2xl font-bold text-[#181818] mb-2">
+              Send Us a Message
+            </h2>
+            <div className="w-12 h-1 bg-[#E63946] mb-8" />
+            <div className="flex flex-col gap-4">
+              <input
+                type="text"
+                placeholder="Full Name"
+                className="w-full border border-gray-200 bg-[#FAFAFA] px-4 py-3 text-[#181818] focus:outline-none focus:border-[#E63946]"
+              />
+              <input
+                type="email"
+                placeholder="Email Address"
+                className="w-full border border-gray-200 bg-[#FAFAFA] px-4 py-3 text-[#181818] focus:outline-none focus:border-[#E63946]"
+              />
+              <input
+                type="tel"
+                placeholder="Phone Number"
+                className="w-full border border-gray-200 bg-[#FAFAFA] px-4 py-3 text-[#181818] focus:outline-none focus:border-[#E63946]"
+              />
+              <textarea
+                placeholder="How can we help you?"
+                rows={4}
+                className="w-full border border-gray-200 bg-[#FAFAFA] px-4 py-3 text-[#181818] focus:outline-none focus:border-[#E63946] resize-none"
+              />
+              <button className="bg-[#E63946] text-white font-bold py-3 px-8 hover:bg-red-700 transition-colors duration-200">
+                Send Message
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+  );
+}
