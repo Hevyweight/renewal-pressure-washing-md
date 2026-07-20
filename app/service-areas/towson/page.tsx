@@ -24,38 +24,53 @@ const faqs = [
 ];
 
 const photos = [
-  { src: "/gallery/house_washing_1.jpg", alt: "House washing in Towson MD" },
-  { src: "/gallery/concrete_cleaning_1.jpg", alt: "Driveway cleaning Towson MD" },
-  { src: "/gallery/deck_cleaning_1.jpg", alt: "Deck cleaning service Towson MD" },
-  { src: "/gallery/residential_1.jpg", alt: "Residential power washing Towson MD" },
-  { src: "/gallery/commercial_1.jpg", alt: "Commercial pressure washing Towson MD" },
-  { src: "/gallery/house_washing_2.jpg", alt: "Exterior cleaning Towson MD" },
+  { src: "/images/gallery/power_washing_7.jpg", alt: "House washing in Towson MD" },
+  { src: "/images/gallery/commercial_11.jpg", alt: "Driveway cleaning Towson MD" },
+  { src: "/images/gallery/commercial_23.jpg", alt: "Deck cleaning service Towson MD" },
+  { src: "/images/gallery/residential_3.jpg", alt: "Residential power washing Towson MD" },
+  { src: "/images/gallery/commercial_24.jpg", alt: "Commercial pressure washing Towson MD" },
+  { src: "/images/gallery/window_cleaning_1.jpg", alt: "Exterior cleaning Towson MD" },
 ];
 
 export default function TowsonPage() {
   return (
     <main className="bg-[#FAFAFA] min-h-screen">
 
-      {/* Hero */}
-      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
-        <Image
-          src="/service-areas/towson-md-hero.jpg"
-          alt="Power Washing Towson MD"
-          fill
-          className="object-cover"
-          priority
-          quality={90}
-        />
-        <div className="absolute inset-0 bg-black/50" />
-        <div className="relative z-10 text-center px-6">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-            Power Washing in Towson, MD
-          </h1>
-          <p className="text-white text-lg md:text-xl max-w-2xl mx-auto">
-            Professional exterior cleaning for Towson homeowners and businesses — fighting the algae, mildew, and grime that Baltimore County&apos;s humid climate produces year round.
-          </p>
+    {/* Hero */}
+    <section className="relative h-[70vh] flex items-center justify-center overflow-hidden pt-20">
+      <Image
+        src="/images/gallery/commercial_13.jpg"
+        alt="Power Washing Catonsville MD"
+        fill
+        className="object-cover"
+        style={{ objectPosition: '50% 20%' }}
+        priority
+        quality={90}
+      />
+      <div className="absolute inset-0 bg-black/50" />
+      <div className="relative z-10 text-center px-6">
+        <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
+          Power Washing in Towson, MD
+        </h1>
+        <p className="text-white text-lg md:text-xl max-w-2xl mx-auto mb-8">
+          Professional exterior cleaning for Towson homeowners and businesses — fighting the algae, mildew, and grime that Baltimore County&apos;s humid climate produces year round.
+        </p>
+        <div className="flex items-center justify-center gap-4 flex-wrap">
+          <Link
+            href="/quote"
+            className="bg-[#E63946] text-white font-semibold text-base md:text-lg px-8 md:px-10 py-4 md:py-5 hover:bg-red-700 transition-colors duration-200"
+          >
+            Get a Free Quote
+          </Link>
+          <a
+            href="tel:+14109998886"
+            className="border border-white text-white font-semibold text-base md:text-lg px-8 md:px-10 py-4 md:py-5 hover:bg-white hover:text-[#181818] transition-colors duration-200"
+          >
+            Call Now
+          </a>
         </div>
-      </section>
+      </div>
+    </section>
 
       {/* Intro */}
       <section className="bg-white py-20 px-6 lg:px-16">
@@ -135,7 +150,7 @@ export default function TowsonPage() {
           <div className="w-12 h-1 bg-[#E63946] mb-8" />
           <div className="w-full h-80 overflow-hidden">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24862!2d-76.6019!3d39.4015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c80f6a1a1a1a1a%3A0x1234!2sTowson%2C+MD+21204!5e0!3m2!1sen!2sus!4v1234567890"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24665.80817376907!2d-76.63570865436078!3d39.396392297915334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c80e5369e65cd3%3A0x641571de3a43d1f4!2sTowson%2C%20MD!5e0!3m2!1sen!2sus!4v1784578726533!5m2!1sen!2sus"
               width="100%"
               height="100%"
               style={{ border: 0 }}

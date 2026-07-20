@@ -3,135 +3,23 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-
-const services = [
-  {
-    title: "House Washing",
-    slug: "house-washing",
-    description: "Eco-friendly, mold-removing, and curb appeal-restoring.",
-    image: "/services/house-washing.jpg",
-  },
-  {
-    title: "Concrete Cleaning",
-    slug: "concrete-cleaning",
-    description: "Streak-free driveways, walkways, and patios that last.",
-    image: "/services/concrete-cleaning.jpg",
-  },
-  {
-    title: "Deck Cleaning",
-    slug: "deck-cleaning",
-    description: "Restore your deck's natural beauty safely and effectively.",
-    image: "/services/deck-cleaning.jpg",
-  },
-  {
-    title: "Patio Cleaning",
-    slug: "patio-cleaning",
-    description: "Clean, safe outdoor spaces ready for any occasion.",
-    image: "/services/patio-cleaning.jpg",
-  },
-  {
-    title: "Window Cleaning",
-    slug: "window-cleaning",
-    description: "Crystal clear windows inside and out, streak-free guaranteed.",
-    image: "/services/window-cleaning.jpg",
-  },
-  {
-    title: "Parking Garage Cleaning",
-    slug: "parking-garage-cleaning",
-    description: "Professional cleaning for commercial parking structures.",
-    image: "/services/parking-garage-cleaning.jpg",
-  },
-  {
-    title: "Commercial Pressure Washing",
-    slug: "commercial-pressure-washing",
-    description: "Large scale exterior cleaning for commercial properties.",
-    image: "/services/commercial-pressure-washing.jpg",
-  },
-  {
-    title: "Christmas Light Installation",
-    slug: "christmas-light-installation",
-    description: "Professional holiday lighting that makes your property shine.",
-    image: "/services/christmas-light-installation.jpg",
-  },
-];
+import Services from "../components/services";
 
 export default function ServicesPage() {
-  const [current, setCurrent] = useState(0);
-
-  const prev = () => setCurrent((i) => (i === 0 ? services.length - 1 : i - 1));
-  const next = () => setCurrent((i) => (i === services.length - 1 ? 0 : i + 1));
-  const getIndex = (offset: number) => (current + offset + services.length) % services.length;
 
   return (
     <main className="bg-[#FAFAFA] min-h-screen">
 
       {/* Header */}
-      <section className="bg-[#181818] py-24 px-6 lg:px-16 text-center">
+      <section className="bg-[#181818] py-24 px-6 lg:px-16 text-center pt-40">
         <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-          Our Services
+          Professional & Reliable Cleaning for Every Surface
         </h1>
-        <div className="w-16 h-1 bg-[#E63946] mx-auto" />
+        <div className="w-160 h-1 bg-[#E63946] mx-auto" />
       </section>
 
       {/* Carousel */}
-      <section className="bg-white py-20 px-6 lg:px-16">
-        <div className="max-w-6xl mx-auto">
-          <div className="relative flex items-center justify-center gap-4">
-            <button
-              onClick={prev}
-              className="bg-white border border-gray-200 shadow p-4 hover:bg-gray-50 transition z-10 shrink-0"
-            >
-              ←
-            </button>
-            <div className="flex gap-4 overflow-hidden w-full justify-center">
-              {[-1, 0, 1].map((offset) => {
-                const service = services[getIndex(offset)];
-                const isCenter = offset === 0;
-                return (
-                  <div
-                    key={service.slug}
-                    className={`relative flex-shrink-0 transition-all duration-300 ${
-                      isCenter ? "w-1/2 opacity-100" : "w-1/4 opacity-50"
-                    } h-80 bg-gray-400 overflow-hidden`}
-                  >
-                    <Image
-                      src={service.image}
-                      alt={service.title}
-                      fill
-                      className="object-cover"
-                    />
-                    <div className="absolute bottom-4 left-4 z-10">
-                      <span
-                        className="text-white font-bold text-lg"
-                        style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
-                      >
-                        {service.title}
-                      </span>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-            <button
-              onClick={next}
-              className="bg-white border border-gray-200 shadow p-4 hover:bg-gray-50 transition z-10 shrink-0"
-            >
-              →
-            </button>
-          </div>
-          <div className="mt-6 pl-[calc(25%+1rem)]">
-            <Link
-              href={`/services/${services[current].slug}`}
-              className="text-lg font-bold text-[#181818] underline hover:text-[#E63946] transition-colors"
-            >
-              Explore {services[current].title}
-            </Link>
-            <p className="text-[#2A2A2A] text-sm mt-1">
-              {services[current].description}
-            </p>
-          </div>
-        </div>
-      </section>
+      <Services />
 
       {/* Text Section */}
       <section className="bg-[#FAFAFA] py-20 px-6 lg:px-16">
@@ -151,12 +39,33 @@ export default function ServicesPage() {
 
       {/* Photos Grid */}
       <section className="bg-white py-20 px-6 lg:px-16">
-        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-4">
-          {[1, 2, 3, 4, 5, 6].map((i) => (
-            <div key={i} className="relative h-48 bg-gray-200 overflow-hidden group">
+        <div className="max-w-8xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-4">
+          {[
+            { src: "/images/gallery/commercial_1.jpg", alt: "Commercial pressure washing Baltimore MD" },
+            { src: "/images/gallery/commercial_22.jpg", alt: "Commercial exterior cleaning Baltimore MD" },
+            { src: "/images/gallery/commercial_3.jpg", alt: "Commercial building wash Baltimore MD" },
+            { src: "/images/gallery/commercial_4.jpg", alt: "Parking lot cleaning Baltimore MD" },
+            { src: "/images/gallery/commercial_5.jpg", alt: "Commercial power washing Baltimore MD" },
+            { src: "/images/gallery/commercial_26.jpg", alt: "Building exterior cleaning Baltimore MD" },
+          ].map((photo, i) => (
+            <div key={i} className="relative aspect-video overflow-hidden group">
+              <Image
+                src={photo.src}
+                alt={photo.alt}
+                fill
+                className="object-cover transition-transform duration-300 group-hover:scale-105"
+              />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300" />
             </div>
           ))}
+        </div>
+         <div className="mt-8 text-center">
+          <Link
+            href="/gallery"
+            className="text-[#181818] font-bold underline underline-offset-4 hover:text-[#E63946] transition-colors"
+          >
+            View Full Gallery →
+          </Link>
         </div>
       </section>
 

@@ -24,12 +24,12 @@ const faqs = [
 ];
 
 const photos = [
-  { src: "/gallery/house_washing_1.jpg", alt: "House washing in Catonsville MD" },
-  { src: "/gallery/concrete_cleaning_1.jpg", alt: "Driveway cleaning Catonsville MD" },
-  { src: "/gallery/deck_cleaning_1.jpg", alt: "Deck cleaning service Catonsville MD" },
-  { src: "/gallery/residential_1.jpg", alt: "Residential power washing Catonsville MD" },
-  { src: "/gallery/commercial_1.jpg", alt: "Commercial pressure washing Catonsville MD" },
-  { src: "/gallery/house_washing_2.jpg", alt: "Exterior cleaning Catonsville MD" },
+  { src: "/images/gallery/residential_4.jpg", alt: "House washing in Catonsville MD" },
+  { src: "/images/gallery/commercial_16.jpg", alt: "Driveway cleaning Catonsville MD" },
+  { src: "/images/gallery/commercial_18.jpg", alt: "Deck cleaning service Catonsville MD" },
+  { src: "/images/gallery/parking_garage_cleaning_4.jpg", alt: "Residential power washing Catonsville MD" },
+  { src: "/images/gallery/commercial_19.jpg", alt: "Commercial pressure washing Catonsville MD" },
+  { src: "/images/gallery/commercial_15.jpg", alt: "Exterior cleaning Catonsville MD" },
 ];
 
 export default function CatonsvillePage() {
@@ -37,12 +37,13 @@ export default function CatonsvillePage() {
     <main className="bg-[#FAFAFA] min-h-screen">
 
       {/* Hero */}
-      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[70vh] flex items-center justify-center overflow-hidden pt-20">
         <Image
-          src="/service-areas/catonsville-md-hero.jpg"
+          src="/images/gallery/commercial_13.jpg"
           alt="Power Washing Catonsville MD"
           fill
           className="object-cover"
+          style={{ objectPosition: '50% 20%' }}
           priority
           quality={90}
         />
@@ -51,9 +52,23 @@ export default function CatonsvillePage() {
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
             Power Washing in Catonsville, MD
           </h1>
-          <p className="text-white text-lg md:text-xl max-w-2xl mx-auto">
+          <p className="text-white text-lg md:text-xl max-w-2xl mx-auto mb-8">
             Professional exterior cleaning for Catonsville&apos;s historic rowhouses, wooded neighborhoods, and family homes — where Baltimore County meets the Patapsco Valley.
           </p>
+          <div className="flex items-center justify-center gap-4 flex-wrap">
+            <Link
+              href="/quote"
+              className="bg-[#E63946] text-white font-semibold text-base md:text-lg px-8 md:px-10 py-4 md:py-5 hover:bg-red-700 transition-colors duration-200"
+            >
+              Get a Free Quote
+            </Link>
+            <a
+              href="tel:+14109998886"
+              className="border border-white text-white font-semibold text-base md:text-lg px-8 md:px-10 py-4 md:py-5 hover:bg-white hover:text-[#181818] transition-colors duration-200"
+            >
+              Call Now
+            </a>
+          </div>
         </div>
       </section>
 
@@ -135,7 +150,7 @@ export default function CatonsvillePage() {
           <div className="w-12 h-1 bg-[#E63946] mb-8" />
           <div className="w-full h-80 overflow-hidden">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24862!2d-76.7319!3d39.2723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c81c3e91c0d8c5%3A0x1234!2sCatonsville%2C+MD+21228!5e0!3m2!1sen!2sus!4v1234567890"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49427.116332589474!2d-76.78283393791935!3d39.2611471491272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c81c3dc90e8c4d%3A0x21f5b30edc24738d!2sCatonsville%2C%20MD!5e0!3m2!1sen!2sus!4v1784579040637!5m2!1sen!2sus"
               width="100%"
               height="100%"
               style={{ border: 0 }}

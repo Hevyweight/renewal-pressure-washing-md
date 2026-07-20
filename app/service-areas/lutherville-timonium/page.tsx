@@ -24,12 +24,12 @@ const faqs = [
 ];
 
 const photos = [
-  { src: "/gallery/house_washing_1.jpg", alt: "House washing in Lutherville Timonium MD" },
-  { src: "/gallery/concrete_cleaning_1.jpg", alt: "Driveway cleaning Lutherville Timonium MD" },
-  { src: "/gallery/deck_cleaning_1.jpg", alt: "Deck cleaning service Lutherville Timonium MD" },
-  { src: "/gallery/residential_1.jpg", alt: "Residential power washing Lutherville Timonium MD" },
-  { src: "/gallery/commercial_1.jpg", alt: "Commercial pressure washing Timonium MD" },
-  { src: "/gallery/house_washing_2.jpg", alt: "Exterior cleaning Lutherville MD" },
+  { src: "/images/gallery/power_washing_1.jpg", alt: "House washing in Timonium MD" },
+  { src: "/images/gallery/parking_garage_cleaning_1.jpg", alt: "Driveway cleaning Timonium MD" },
+  { src: "/images/gallery/commercial_9.jpg", alt: "Deck cleaning service Timonium MD" },
+  { src: "/images/gallery/window_cleaning_3.jpg", alt: "Residential power washing Timonium MD" },
+  { src: "/images/gallery/commercial_4.jpg", alt: "Commercial pressure washing Timonium MD" },
+  { src: "/images/gallery/lights_1.jpg", alt: "Exterior cleaning Timonium MD" },
 ];
 
 export default function LuthervilleTimoniumPage() {
@@ -37,12 +37,13 @@ export default function LuthervilleTimoniumPage() {
     <main className="bg-[#FAFAFA] min-h-screen">
 
       {/* Hero */}
-      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[70vh] flex items-center justify-center overflow-hidden pt-20">
         <Image
-          src="/service-areas/lutherville-timonium-md-hero.jpg"
-          alt="Power Washing Lutherville Timonium MD"
+          src="/images/gallery/commercial_13.jpg"
+          alt="Power Washing Catonsville MD"
           fill
           className="object-cover"
+          style={{ objectPosition: '50% 20%' }}
           priority
           quality={90}
         />
@@ -51,9 +52,23 @@ export default function LuthervilleTimoniumPage() {
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
             Power Washing in Lutherville-Timonium, MD
           </h1>
-          <p className="text-white text-lg md:text-xl max-w-2xl mx-auto">
+          <p className="text-white text-lg md:text-xl max-w-2xl mx-auto mb-8">
             Professional exterior cleaning for Lutherville&apos;s wooded residential properties and Timonium&apos;s busy commercial corridor — one ZIP code, two distinct communities, one standard of clean.
           </p>
+          <div className="flex items-center justify-center gap-4 flex-wrap">
+            <Link
+              href="/quote"
+              className="bg-[#E63946] text-white font-semibold text-base md:text-lg px-8 md:px-10 py-4 md:py-5 hover:bg-red-700 transition-colors duration-200"
+            >
+              Get a Free Quote
+            </Link>
+            <a
+              href="tel:+14109998886"
+              className="border border-white text-white font-semibold text-base md:text-lg px-8 md:px-10 py-4 md:py-5 hover:bg-white hover:text-[#181818] transition-colors duration-200"
+            >
+              Call Now
+            </a>
+          </div>
         </div>
       </section>
 
@@ -135,7 +150,7 @@ export default function LuthervilleTimoniumPage() {
           <div className="w-12 h-1 bg-[#E63946] mb-8" />
           <div className="w-full h-80 overflow-hidden">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24862!2d-76.6219!3d39.4482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c80f6a1a1a1a1a%3A0x1234!2sLuthersville-Timonium%2C+MD+21093!5e0!3m2!1sen!2sus!4v1234567890"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24648.28854645204!2d-76.62261460424256!3d39.445916773739924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c80e1e4978f415%3A0x55eeb0f12adf80cb!2sTimonium%2C%20MD!5e0!3m2!1sen!2sus!4v1784578990127!5m2!1sen!2sus"
               width="100%"
               height="100%"
               style={{ border: 0 }}

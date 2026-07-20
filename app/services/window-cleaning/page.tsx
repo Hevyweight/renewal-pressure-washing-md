@@ -1,3 +1,4 @@
+import FAQAccordion from "@/app/components/service-areas/faqAccordion";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -25,12 +26,13 @@ export default function WindowCleaningPage() {
     <main className="bg-[#FAFAFA] min-h-screen">
 
       {/* Hero */}
-      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
         <Image
-          src="/services/window-cleaning-hero.jpg"
+          src="/images/gallery/window_cleaning_1.jpg"
           alt="Window Cleaning Baltimore MD"
           fill
           className="object-cover"
+          style={{ objectPosition: '70% 35%' }}
           priority
           quality={90}
         />
@@ -122,13 +124,18 @@ export default function WindowCleaningPage() {
               ))}
             </ul>
           </div>
-          <div className="relative h-80 overflow-hidden">
+          <div className="flex flex-col gap-3">
+            <div className="relative h-100 overflow-hidden rounded-sm">
             <Image
-              src="/services/window-cleaning-2.jpg"
+              src="/images/gallery/window_cleaning_2.jpg"
               alt="Window cleaning service Baltimore MD"
               fill
               className="object-cover"
             />
+          </div>
+            <p className="text-[#2A2A2A] text-sm text-center italic">
+                Renewal Pressure Washing — Commercial exterior cleaning in Baltimore, MD
+            </p>
           </div>
         </div>
       </section>
@@ -181,23 +188,7 @@ export default function WindowCleaningPage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-white py-20 px-6 lg:px-16">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-[#181818] mb-2">
-            Frequently Asked Questions
-          </h2>
-          <div className="w-16 h-1 bg-[#E63946] mb-10" />
-          <div className="flex flex-col">
-            {faqs.map((faq, index) => (
-              <div key={index} className="border-t border-gray-200 py-6">
-                <h3 className="text-lg font-bold text-[#181818] mb-2">{faq.question}</h3>
-                <p className="text-[#2A2A2A] leading-relaxed">{faq.answer}</p>
-              </div>
-            ))}
-            <div className="border-t border-gray-200" />
-          </div>
-        </div>
-      </section>
+      <FAQAccordion faqs={faqs} />
 
       {/* Internal Links */}
       <section className="bg-[#FAFAFA] py-20 px-6 lg:px-16">

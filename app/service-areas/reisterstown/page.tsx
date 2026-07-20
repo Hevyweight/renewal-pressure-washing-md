@@ -24,12 +24,12 @@ const faqs = [
 ];
 
 const photos = [
-  { src: "/gallery/house_washing_1.jpg", alt: "House washing in Reisterstown MD" },
-  { src: "/gallery/concrete_cleaning_1.jpg", alt: "Driveway cleaning Reisterstown MD" },
-  { src: "/gallery/deck_cleaning_1.jpg", alt: "Deck cleaning service Reisterstown MD" },
-  { src: "/gallery/residential_1.jpg", alt: "Residential power washing Reisterstown MD" },
-  { src: "/gallery/commercial_1.jpg", alt: "Commercial pressure washing Reisterstown MD" },
-  { src: "/gallery/house_washing_2.jpg", alt: "Exterior cleaning Reisterstown MD" },
+  { src: "/images/gallery/power_washing_11.jpg", alt: "House washing in Reisterstown MD" },
+  { src: "/images/gallery/parking_garage_cleaning_2.jpg", alt: "Driveway cleaning Reisterstown MD" },
+  { src: "/images/gallery/commercial_5.jpg", alt: "Deck cleaning service Reisterstown MD" },
+  { src: "/images/gallery/residential_7.jpg", alt: "Residential power washing Reisterstown MD" },
+  { src: "/images/gallery/commercial_14.jpg", alt: "Commercial pressure washing Reisterstown MD" },
+  { src: "/images/gallery/lights_6.jpg", alt: "Exterior cleaning Reisterstown MD" },
 ];
 
 export default function ReisterstownPage() {
@@ -37,12 +37,13 @@ export default function ReisterstownPage() {
     <main className="bg-[#FAFAFA] min-h-screen">
 
       {/* Hero */}
-      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[70vh] flex items-center justify-center overflow-hidden pt-20">
         <Image
-          src="/service-areas/reisterstown-md-hero.jpg"
+          src="/images/gallery/commercial_13.jpg"
           alt="Power Washing Reisterstown MD"
           fill
           className="object-cover"
+          style={{ objectPosition: '50% 20%' }}
           priority
           quality={90}
         />
@@ -51,9 +52,23 @@ export default function ReisterstownPage() {
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
             Power Washing in Reisterstown, MD
           </h1>
-          <p className="text-white text-lg md:text-xl max-w-2xl mx-auto">
+          <p className="text-white text-lg md:text-xl max-w-2xl mx-auto mb-8">
             Professional exterior cleaning for Reisterstown&apos;s historic homes and newer developments — respecting the character of one of Baltimore County&apos;s most storied communities.
           </p>
+          <div className="flex items-center justify-center gap-4 flex-wrap">
+            <Link
+              href="/quote"
+              className="bg-[#E63946] text-white font-semibold text-base md:text-lg px-8 md:px-10 py-4 md:py-5 hover:bg-red-700 transition-colors duration-200"
+            >
+              Get a Free Quote
+            </Link>
+            <a
+              href="tel:+14109998886"
+              className="border border-white text-white font-semibold text-base md:text-lg px-8 md:px-10 py-4 md:py-5 hover:bg-white hover:text-[#181818] transition-colors duration-200"
+            >
+              Call Now
+            </a>
+          </div>
         </div>
       </section>
 
@@ -135,9 +150,9 @@ export default function ReisterstownPage() {
           <div className="w-12 h-1 bg-[#E63946] mb-8" />
           <div className="w-full h-80 overflow-hidden">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24862!2d-76.8219!3d39.4573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c81c3e91c0d8c5%3A0x1234!2sReisterstown%2C+MD+21136!5e0!3m2!1sen!2sus!4v1234567890"
-              width="100%"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49299.18416725554!2d-76.8184800902616!3d39.442233727531494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c81610d70d2c1b%3A0x71219558c724220!2sReisterstown%2C%20MD!5e0!3m2!1sen!2sus!4v1784578895931!5m2!1sen!2sus" 
               height="100%"
+              width="100%"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"

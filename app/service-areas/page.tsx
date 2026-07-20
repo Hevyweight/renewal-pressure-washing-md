@@ -67,39 +67,40 @@ export default function ServiceAreasPage() {
         </p>
       </section>
 
+      {/* Map */}
+      <section className="py-12 px-6 lg:px-16">
+        <div className="max-w-6xl mx-auto overflow-hidden" style={{ height: "500px" }}>
+          <iframe
+            src="https://www.google.com/maps/d/u/2/embed?mid=1jui6gpgeYt2bZjCSZjXp4wOenl46H2k&ehbc=2E312F"
+            width="100%"
+            height="560"
+            style={{ border: 0, marginTop: "-60px" }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
+      </section>
+
       {/* Areas Grid */}
-      <section className="py-20 px-6 lg:px-16">
+      <section className="py-16 px-6 lg:px-16">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="flex flex-wrap justify-center gap-6">
             {areas.map((area) => (
               <Link
                 key={area.slug}
                 href={`/service-areas/${area.slug}`}
-                className="group border border-gray-200 hover:border-[#E63946] transition-colors duration-200 overflow-hidden"
+                className="group border border-gray-200 hover:border-[#E63946] transition-colors duration-200 p-6 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
               >
-                {/* Image */}
-                <div className="relative h-48 overflow-hidden">
-                  <Image
-                    src={area.image}
-                    alt={`Power washing in ${area.name} MD`}
-                    fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-all duration-300" />
-                  <h2 className="absolute bottom-4 left-4 text-white font-bold text-xl">
-                    {area.name}
-                  </h2>
-                </div>
-
-                {/* Content */}
-                <div className="p-6">
-                  <p className="text-[#2A2A2A] text-sm leading-relaxed mb-4">
-                    {area.description}
-                  </p>
-                  <span className="text-[#E63946] font-bold text-sm group-hover:underline">
-                    Learn More →
-                  </span>
-                </div>
+                <h2 className="text-xl font-bold text-[#181818] group-hover:text-[#E63946] transition-colors mb-3">
+                  {area.name}
+                </h2>
+                <p className="text-[#2A2A2A] text-sm leading-relaxed mb-4">
+                  {area.description}
+                </p>
+                <span className="text-[#E63946] font-bold text-sm group-hover:underline">
+                  Visit Website →
+                </span>
               </Link>
             ))}
           </div>
@@ -138,7 +139,7 @@ export default function ServiceAreasPage() {
           </div>
           <div className="w-full h-80 overflow-hidden">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d99449!2d-76.7783!3d39.3373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c81c3e91c0d8c5%3A0x1234!2sBaltimore+County%2C+MD!5e0!3m2!1sen!2sus!4v1234567890"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d394411.6279391805!2d-76.92129254876349!3d39.43902758951485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c803aed6f483b7%3A0x2774e0a871602819!2sBaltimore%20County%2C%20MD!5e0!3m2!1sen!2sus!4v1784412136032!5m2!1sen!2sus" 
               width="100%"
               height="100%"
               style={{ border: 0 }}

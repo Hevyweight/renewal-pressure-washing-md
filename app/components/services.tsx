@@ -84,26 +84,20 @@ export default function Services() {
 
   {/* Carousel goes full width */}
   <div className="relative flex items-center">
-<button
-  onClick={prev}
-  className="absolute left-4 top-4 md:top-1/2 md:-translate-y-1/2 z-20 bg-white shadow p-5 text-xl font-bold hover:bg-gray-50 transition"
->
-  ←
-</button>
+    <button
+      onClick={prev}
+      className="absolute left-4 top-4 md:top-1/2 md:-translate-y-1/2 z-20 bg-white shadow p-5 text-xl font-bold hover:bg-gray-50 transition"
+    >
+      ←
+    </button>
 
     <div className="flex w-full overflow-hidden">
       {[-1, 0, 1].map((offset) => {
         const service = services[getIndex(offset)];
         const isCenter = offset === 0;
-        return (
-          <div
-            key={service.slug}
-            className={`relative flex-shrink-0 transition-all duration-300 ${
-              isCenter
-                ? "w-full md:w-1/2 opacity-100"
-                : "hidden md:block md:w-1/4 opacity-50"
-            } h-[60vh]`}
-          >
+
+        const content = (
+          <>
             <Image
               src={service.image}
               alt={service.title}
@@ -119,6 +113,23 @@ export default function Services() {
                 {service.title}
               </span>
             </div>
+          </>
+        );
+
+        return isCenter ? (
+          <Link
+            key={service.slug}
+            href={`/services/${service.slug}`}
+            className="relative flex-shrink-0 transition-all duration-300 w-full md:w-1/2 opacity-100 h-[60vh]"
+          >
+            {content}
+          </Link>
+        ) : (
+          <div
+            key={service.slug}
+            className={`relative flex-shrink-0 transition-all duration-300 hidden md:block md:w-1/4 opacity-50 h-[60vh]`}
+          >
+            {content}
           </div>
         );
       })}

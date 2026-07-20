@@ -28,12 +28,13 @@ export default function PikesvillePage() {
     <main className="bg-[#FAFAFA] min-h-screen">
 
       {/* Hero */}
-      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[70vh] flex items-center justify-center overflow-hidden pt-20">
         <Image
-          src="/service-areas/pikesville-md-hero.jpg"
+          src="/images/gallery/commercial_13.jpg"
           alt="Power Washing Pikesville MD"
           fill
           className="object-cover"
+          style={{ objectPosition: '50% 20%' }}
           priority
           quality={90}
         />
@@ -42,9 +43,23 @@ export default function PikesvillePage() {
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
             Power Washing in Pikesville, MD
           </h1>
-          <p className="text-white text-lg md:text-xl max-w-2xl mx-auto">
+          <p className="text-white text-lg md:text-xl max-w-2xl mx-auto mb-8">
             Professional exterior cleaning for Pikesville homeowners and businesses — restoring curb appeal to one of Baltimore County&apos;s most established communities.
           </p>
+          <div className="flex items-center justify-center gap-4 flex-wrap">
+            <Link
+              href="/quote"
+              className="bg-[#E63946] text-white font-semibold text-base md:text-lg px-8 md:px-10 py-4 md:py-5 hover:bg-red-700 transition-colors duration-200"
+            >
+              Get a Free Quote
+            </Link>
+            <a
+              href="tel:+14109998886"
+              className="border border-white text-white font-semibold text-base md:text-lg px-8 md:px-10 py-4 md:py-5 hover:bg-white hover:text-[#181818] transition-colors duration-200"
+            >
+              Call Now
+            </a>
+          </div>
         </div>
       </section>
 
@@ -66,9 +81,9 @@ export default function PikesvillePage() {
 
       {/* Local Challenges */}
       <section className="bg-[#FAFAFA] py-20 px-6 lg:px-16">
-        <div className="max-w-8xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-[#181818] mb-2">
-            What Makes Pikesville Properties Unique
+            What Makes Reisterstown Properties Unique
           </h2>
           <div className="w-16 h-1 bg-[#E63946] mb-10" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -90,9 +105,12 @@ export default function PikesvillePage() {
                 body: "With median home values among the highest in Baltimore County, Pikesville homeowners understand that property appearance directly affects value. A professional exterior cleaning before listing a home for sale or simply as part of annual maintenance is one of the highest ROI investments a Pikesville homeowner can make.",
               },
             ].map((item) => (
-              <div key={item.title} className="border-l-4 border-[#E63946] pl-6">
-                <h3 className="text-lg font-bold text-[#181818] mb-2">{item.title}</h3>
-                <p className="text-[#2A2A2A] leading-relaxed">{item.body}</p>
+              <div key={item.title} className="bg-white p-8 border border-gray-100">
+                <h3 className="text-lg font-bold text-[#181818] mb-3 flex items-start gap-3">
+                  <span className="text-[#E63946] shrink-0 mt-0.5">▸</span>
+                  {item.title}
+                </h3>
+                <p className="text-[#2A2A2A] leading-relaxed text-sm">{item.body}</p>
               </div>
             ))}
           </div>
@@ -103,12 +121,12 @@ export default function PikesvillePage() {
       <ServicesGrid />
 
       <MiniGallery photos={[
-        { src: "/gallery/house_washing_1.jpg", alt: "House washing job in Pikesville MD" },
-        { src: "/gallery/concrete_cleaning_1.jpg", alt: "Driveway cleaning in Pikesville MD" },
-        { src: "/gallery/commercial_1.jpg", alt: "Commercial pressure washing Pikesville MD" },
-        { src: "/gallery/deck_cleaning_1.jpg", alt: "Deck cleaning service Pikesville MD" },
-        { src: "/gallery/residential_1.jpg", alt: "Residential power washing Pikesville MD" },
-        { src: "/gallery/house_washing_2.jpg", alt: "Exterior cleaning Pikesville MD" },
+        { src: "/images/gallery/power_washing_7.jpg", alt: "House washing in Towson MD" },
+        { src: "/images/gallery/commercial_11.jpg", alt: "Driveway cleaning Towson MD" },
+        { src: "/images/gallery/commercial_19.jpg", alt: "Deck cleaning service Towson MD" },
+        { src: "/images/gallery/residential_4.jpg", alt: "Residential power washing Towson MD" },
+        { src: "/images/gallery/parking_garage_cleaning_2.jpg", alt: "Commercial pressure washing Towson MD" },
+        { src: "/images/gallery/window_cleaning_1.jpg", alt: "Exterior cleaning Towson MD" },
       ]} />
 
       {/* Review */}
@@ -129,7 +147,7 @@ export default function PikesvillePage() {
           <div className="w-12 h-1 bg-[#E63946] mb-8" />
           <div className="w-full h-80 overflow-hidden">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24862!2d-76.7383!3d39.3773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c81c3e91c0d8c5%3A0x1234!2sPikesville%2C+MD+21208!5e0!3m2!1sen!2sus!4v1234567890"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49342.27925569916!2d-76.7262364!3d39.381311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c810a854931c03%3A0xa91135d161a332a0!2sBaltimore%2C%20MD%2021208!5e0!3m2!1sen!2sus!4v1784578636399!5m2!1sen!2sus"
               width="100%"
               height="100%"
               style={{ border: 0 }}

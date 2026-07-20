@@ -8,6 +8,7 @@ import { usePathname } from "next/navigation";
 const services = [
   { label: "All Services", href: "/services" },
   { label: "House Washing", href: "/services/house-washing" },
+  { label: "Gutter Cleaning", href: "/services/gutter-cleaning" },
   { label: "Concrete Cleaning", href: "/services/concrete-cleaning" },
   { label: "Deck Cleaning", href: "/services/deck-cleaning" },
   { label: "Patio Cleaning", href: "/services/patio-cleaning" },
@@ -60,7 +61,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 overflow-hidden transition-all duration-300 ease-in-out ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${
         scrolled ? "bg-[#3A3A3A]/85 backdrop-blur-sm shadow-lg" : "bg-transparent md:bg-transparent bg-[#3A3A3A]/85"
       }`}
     >
@@ -145,7 +146,7 @@ export default function Navbar() {
                 : "bg-[#E63946] text-white hover:bg-red-700"
             }`}
           >
-            Get a Quote
+            Get a Free Quote
           </Link>
         </div>
 
@@ -159,7 +160,7 @@ export default function Navbar() {
                 : "bg-[#E63946] text-white hover:bg-red-700"
             }`}
           >
-            Get a Quote
+            Get a Free Quote
           </Link>
           <button
             className="text-white focus:outline-none"
