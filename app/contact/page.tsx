@@ -1,8 +1,39 @@
+'use client'
+
 import Link from "next/link";
+import { useState } from "react";
 import FAQAccordion from "../components/contact/faqAccordion";
 
 
 export default function ContactPage() {
+  const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
+    const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+      setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
+      e.preventDefault();
+      setStatus("loading");
+      try {
+        const res = await fetch("/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        });
+        const data = await res.json();
+        if (data.success) {
+          setStatus("success");
+          setFormData({ name: "", email: "", phone: "", message: "" });
+        } else {
+          setStatus("error");
+        }
+      } catch {
+        setStatus("error");
+      }
+    };
+
   return (
     <main className="bg-[#FAFAFA] min-h-screen">
 
@@ -107,30 +138,56 @@ export default function ContactPage() {
               Send Us a Message
             </h2>
             <div className="w-12 h-1 bg-[#E63946] mb-8" />
-            <div className="flex flex-col gap-4">
-              <input
-                type="text"
-                placeholder="Full Name"
-                className="w-full border border-gray-200 bg-[#FAFAFA] px-4 py-3 text-[#181818] focus:outline-none focus:border-[#E63946]"
-              />
-              <input
-                type="email"
-                placeholder="Email Address"
-                className="w-full border border-gray-200 bg-[#FAFAFA] px-4 py-3 text-[#181818] focus:outline-none focus:border-[#E63946]"
-              />
-              <input
-                type="tel"
-                placeholder="Phone Number"
-                className="w-full border border-gray-200 bg-[#FAFAFA] px-4 py-3 text-[#181818] focus:outline-none focus:border-[#E63946]"
-              />
-              <textarea
-                placeholder="How can we help you?"
-                rows={4}
-                className="w-full border border-gray-200 bg-[#FAFAFA] px-4 py-3 text-[#181818] focus:outline-none focus:border-[#E63946] resize-none"
-              />
-              <button className="bg-[#E63946] text-white font-bold py-3 px-8 hover:bg-red-700 transition-colors duration-200">
-                Send Message
-              </button>
+              <div className="flex flex-col gap-4">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Full Name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="w-full border border-gray-200 bg-[#FAFAFA] px-4 py-3 text-[#181818] focus:outline-none focus:border-[#E63946]"
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email Address"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="w-full border border-gray-200 bg-[#FAFAFA] px-4 py-3 text-[#181818] focus:outline-none focus:border-[#E63946]"
+                />
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone Number"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  className="w-full border border-gray-200 bg-[#FAFAFA] px-4 py-3 text-[#181818] focus:outline-none focus:border-[#E63946]"
+                />
+                <textarea
+                  name="message"
+                  placeholder="How can we help you?"
+                  value={formData.message}
+                  onChange={handleChange}
+                  rows={4}
+                  className="w-full border border-gray-200 bg-[#FAFAFA] px-4 py-3 text-[#181818] focus:outline-none focus:border-[#E63946] resize-none"
+                />
+                <button
+                  onClick={handleSubmit}
+                  disabled={status === "loading"}
+                  className="bg-[#E63946] text-white font-bold py-3 px-8 hover:bg-red-700 transition-colors duration-200 disabled:opacity-50"
+                >
+                  {status === "loading" ? "Sending..." : "Send Message"}
+                </button>
+                {status === "success" && (
+                  <p className="text-green-600 font-medium text-center">
+                    Message sent! We&apos;ll be in touch shortly.
+                  </p>
+                )}
+                {status === "error" && (
+                  <p className="text-red-600 font-medium text-center">
+                    Something went wrong. Please call us at (410) 999 8886.
+                  </p>
+                )}
             </div>
           </div>
 

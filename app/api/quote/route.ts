@@ -21,7 +21,8 @@ export async function POST(req: Request) {
 
     // Send email to Meir
     await transporter.sendMail({
-      from: process.env.EMAIL_USER,
+      from: `"${name}" <${process.env.EMAIL_USER}>`,
+      replyTo: email,
       to: process.env.MEIR_EMAIL,
       subject: `New Quote Request — ${service}`,
       html: `

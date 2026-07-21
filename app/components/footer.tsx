@@ -34,16 +34,10 @@ export default function Footer() {
 
         {/* Social Icons */}
         <div className="flex items-center gap-6">
-          <a href="#" aria-label="YouTube" className="text-white hover:opacity-70 transition-opacity">
-            <FaYoutube className="w-6 h-6" />
-          </a>
-          <a href="#" aria-label="LinkedIn" className="text-white hover:opacity-70 transition-opacity">
-            <FaLinkedinIn   className="w-6 h-6" />
-          </a>
-          <a href="#" aria-label="Instagram" className="text-white hover:opacity-70 transition-opacity">
+          <a href="https://www.instagram.com/rpw_md/" aria-label="Instagram" className="text-white hover:opacity-70 transition-opacity">
             <FaInstagram className="w-6 h-6" />
           </a>
-          <a href="#" aria-label="Facebook" className="text-white hover:opacity-70 transition-opacity">
+          <a href="https://www.facebook.com/profile.php?id=100050273036367" aria-label="Facebook" className="text-white hover:opacity-70 transition-opacity">
             <FaFacebookF className="w-6 h-6" />
           </a>
         </div>
