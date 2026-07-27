@@ -13,8 +13,8 @@ export default function Home() {
     <div>
       <Hero />
       <Problem />
-      <WhyUs />
       <Services />
+      <WhyUs />
       <Process />
       <Reviews />
       <CTA />
