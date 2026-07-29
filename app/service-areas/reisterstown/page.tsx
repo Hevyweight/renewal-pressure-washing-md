@@ -4,6 +4,11 @@ import ServicesGrid from "@/app/components/service-areas/servicesGrid";
 import MiniGallery from "@/app/components/service-areas/miniGallery";
 import FAQAccordion from "@/app/components/service-areas/faqAccordion";
 
+export const metadata = {
+  title: "Pressure Washing Reisterstown MD",
+  description: "Professional pressure washing services in Reisterstown MD...",
+}
+
 const faqs = [
   {
     question: "Can you clean historic homes in Reisterstown without causing damage?",

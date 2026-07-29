@@ -2,6 +2,11 @@ import FAQAccordion from "@/app/components/service-areas/faqAccordion";
 import Image from "next/image";
 import Link from "next/link";
 
+export const metadata = {
+  title: "Deck Cleaning",
+  description: "Professional deck cleaning services in Baltimore MD...",
+}
+
 const faqs = [
   {
     question: "Can you clean all types of decks?",

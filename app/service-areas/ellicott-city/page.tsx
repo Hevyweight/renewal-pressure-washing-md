@@ -4,6 +4,11 @@ import ServicesGrid from "@/app/components/service-areas/servicesGrid";
 import MiniGallery from "@/app/components/service-areas/miniGallery";
 import FAQAccordion from "@/app/components/service-areas/faqAccordion";
 
+export const metadata = {
+  title: "Pressure Washing Ellicott City MD",
+  description: "Professional pressure washing services in Ellicott City MD...",
+}
+
 const faqs = [
   {
     question: "How does Ellicott City's flood history affect exterior cleaning needs?",

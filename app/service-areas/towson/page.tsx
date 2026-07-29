@@ -4,6 +4,11 @@ import ServicesGrid from "@/app/components/service-areas/servicesGrid";
 import MiniGallery from "@/app/components/service-areas/miniGallery";
 import FAQAccordion from "@/app/components/service-areas/faqAccordion";
 
+export const metadata = {
+  title: "Pressure Washing Towson MD",
+  description: "Professional pressure washing services in Towson MD...",
+}
+
 const faqs = [
   {
     question: "Why do Towson homes develop so much algae and mildew?",

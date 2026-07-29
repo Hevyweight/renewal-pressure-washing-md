@@ -5,6 +5,11 @@ import Link from "next/link";
 import { useState } from "react";
 import Services from "../components/services";
 
+export const metadata = {
+  title: "Pressure Washing Services | Renewal Pressure Washing",
+  description: "Professional pressure washing services in Baltimore MD...",
+}
+
 export default function ServicesPage() {
 
   return (

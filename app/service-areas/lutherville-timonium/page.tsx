@@ -4,6 +4,11 @@ import ServicesGrid from "@/app/components/service-areas/servicesGrid";
 import MiniGallery from "@/app/components/service-areas/miniGallery";
 import FAQAccordion from "@/app/components/service-areas/faqAccordion";
 
+export const metadata = {
+  title: "Pressure Washing Lutherville-Timonium MD",
+  description: "Professional pressure washing services in Lutherville-Timonium MD...",
+}
+
 const faqs = [
   {
     question: "What makes Lutherville homes different to clean than other Baltimore County properties?",

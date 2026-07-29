@@ -2,6 +2,11 @@ import FAQAccordion from "@/app/components/service-areas/faqAccordion";
 import Image from "next/image";
 import Link from "next/link";
 
+export const metadata = {
+  title: "Gutter Cleaning",
+  description: "Professional gutter cleaning services in Baltimore MD...",
+}
+
 const faqs = [
   {
     question: "How often should I have my gutters cleaned?",

@@ -2,6 +2,11 @@ import FAQAccordion from "@/app/components/service-areas/faqAccordion";
 import Image from "next/image";
 import Link from "next/link";
 
+export const metadata = {
+  title: "House Washing",
+  description: "Professional House washing services in Baltimore MD...",
+}
+
 const faqs = [
   {
     question: "How long does a house wash last?",

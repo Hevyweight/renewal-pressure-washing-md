@@ -2,6 +2,11 @@ import FAQAccordion from "@/app/components/service-areas/faqAccordion";
 import Image from "next/image";
 import Link from "next/link";
 
+export const metadata = {
+  title: "Window Cleaning",
+  description: "Professional window cleaning services in Baltimore MD...",
+}
+
 const faqs = [
   {
     question: "Do you clean both interior and exterior windows?",

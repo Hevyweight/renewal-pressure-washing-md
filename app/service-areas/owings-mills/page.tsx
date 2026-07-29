@@ -4,6 +4,11 @@ import ServicesGrid from "@/app/components/service-areas/servicesGrid";
 import MiniGallery from "@/app/components/service-areas/miniGallery";
 import FAQAccordion from "@/app/components/service-areas/faqAccordion";
 
+export const metadata = {
+  title: "Pressure Washing Owings Mills MD",
+  description: "Professional pressure washing services in Owings Mills MD...",
+}
+
 const faqs = [
   {
     question: "Do you service the newer developments in Owings Mills?",

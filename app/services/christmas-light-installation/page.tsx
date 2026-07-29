@@ -2,6 +2,11 @@ import FAQAccordion from "@/app/components/service-areas/faqAccordion";
 import Image from "next/image";
 import Link from "next/link";
 
+export const metadata = {
+  title: "Christmas Light Installation",
+  description: "Professional Christmas light installation services in Baltimore MD...",
+}
+
 const faqs = [
   {
     question: "Do you provide the lights or do I need to supply them?",

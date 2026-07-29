@@ -1,6 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 
+export const metadata = {
+  title: "Service Areas | Renewal Pressure Washing",
+  description: "Professional pressure washing services in Baltimore MD...",
+}
+
 const areas = [
   {
     name: "Pikesville",

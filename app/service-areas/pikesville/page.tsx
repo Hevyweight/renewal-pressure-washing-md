@@ -4,6 +4,11 @@ import ServicesGrid from "@/app/components/service-areas/servicesGrid";
 import MiniGallery from "@/app/components/service-areas/miniGallery";
 import FAQAccordion from "@/app/components/service-areas/faqAccordion";
 
+export const metadata = {
+  title: "Pressure Washing Pikesville MD",
+  description: "Professional pressure washing services in Pikesville MD...",
+}
+
 const faqs = [
   {
     question: "How does Pikesville's older housing stock affect pressure washing?",

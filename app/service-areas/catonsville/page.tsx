@@ -4,6 +4,11 @@ import ServicesGrid from "@/app/components/service-areas/servicesGrid";
 import MiniGallery from "@/app/components/service-areas/miniGallery";
 import FAQAccordion from "@/app/components/service-areas/faqAccordion";
 
+export const metadata = {
+  title: "Pressure Washing Catonsville MD",
+  description: "Professional pressure washing services in Catonsville MD...",
+}
+
 const faqs = [
   {
     question: "Can you clean the historic homes in Catonsville's older neighborhoods?",

@@ -2,6 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import FAQAccordion from "@/app/components/service-areas/faqAccordion";
 
+export const metadata = {
+  title: "Concrete Cleaning",
+  description: "Professional concrete cleaning services in Baltimore MD...",
+}
+
 const faqs = [
   {
     question: "Can you remove oil stains from my driveway?",

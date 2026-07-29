@@ -4,6 +4,11 @@ import ServicesGrid from "@/app/components/service-areas/servicesGrid";
 import MiniGallery from "@/app/components/service-areas/miniGallery";
 import FAQAccordion from "@/app/components/service-areas/faqAccordion";
 
+export const metadata = {
+  title: "Pressure Washing Columbia MD",
+  description: "Professional pressure washing services in Columbia MD...",
+}
+
 const faqs = [
   {
     question: "How does Columbia's village system affect exterior cleaning needs?",
