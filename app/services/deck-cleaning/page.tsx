@@ -33,10 +33,11 @@ export default function DeckCleaningPage() {
       {/* Hero */}
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
         <Image
-          src="/images/gallery/commercial_24.jpg"
+          src="/images/gallery/deck_cleaning_1.jpg"
           alt="Deck Cleaning Baltimore MD"
           fill
           className="object-cover"
+          style={{ objectPosition: '50% 40%' }}
           priority
           quality={90}
         />

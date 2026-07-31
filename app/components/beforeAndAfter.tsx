@@ -14,7 +14,7 @@ const cards = [
     description: "Your neighborhood, our next project.",
     linkText: "See Where We Serve",
     href: "/service-areas",
-    image: "/images/gallery/commercial_5.jpg",
+    image: "/images/gallery/all_5.jpg",
   },
 ];
 
